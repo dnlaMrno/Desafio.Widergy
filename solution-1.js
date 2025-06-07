@@ -20,18 +20,18 @@ function FormatString(sentence) {
 }
 
 function validateText() {
-  const input = document.getElementById('textInput');
-  const resultSpan = document.getElementById('operation');
-  const text = input.value;
+  const inputText = document.getElementById('textInput');
+  const outputText = document.getElementById('operation');
+  const text = inputText.value;
   
   const result = FormatString(text);
   
   if (result === "ERROR") {
-    resultSpan.textContent = "ERROR Caracteres no permitidos";
-    resultSpan.className = "error";
+    outputText.textContent = "ERROR Caracteres no permitidos";
+    outputText.className = "error";
   } else {
-    resultSpan.textContent = result;
-    resultSpan.className = "success";
+    outputText.textContent = result;
+    outputText.className = "success";
   }
 }
   
